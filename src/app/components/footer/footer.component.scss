@@ -1,0 +1,89 @@
+@import '../../../styles.scss';
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    background-image: url(../../../assets/hero_background_img.png);
+    background-color: $primary-color;
+    padding: 3rem;
+
+    @include responsive(xl) {
+        padding: 2rem;
+    }
+
+    @include responsive(sm) {
+        padding: 1rem;
+    }
+}
+
+.footer-section-container {
+    @include displaygrid(repeat(4, 1fr), 2rem);
+    margin-bottom: 2rem;
+
+    @include responsive(md) {
+        @include displaygrid(repeat(1, 1fr), 1rem);
+    }
+}
+
+.footer-logo {
+    @include displayflex(row, center, 1rem);
+    height: 50px;
+    margin-bottom: 1rem;
+
+    img {
+        height: 50px;
+    }
+
+    span {
+        @include text(1.5rem, 600, $white-color);
+    }
+}
+
+.social-media-links {
+    @include displayflex(row, center, 1rem);
+    margin: 1rem 0;
+}
+
+.footer-insta {
+    color: $white-color;
+}
+
+
+.footer-para {
+    @include text(1.5rem, 600, $white-color);
+    padding-bottom: 2rem;
+
+    @include responsive(md) {
+        @include text(1rem, 500, $white-color);
+        padding-bottom: 1rem;
+    }
+}
+
+.footer-secondary-para {
+    @include text(1rem, 500, $white-color);
+    margin-bottom: 1rem 0;
+
+}
+
+.footer-list {
+    list-style: none;
+
+    li {
+        @include text(1rem, 400, $white-color);
+        padding-bottom: 0.5rem;
+
+    }
+}
+
+hr {
+    color: $white-color;
+}
+
+.copy-right {
+    @include text(1rem, 500, $white-color);
+    padding-top: 2rem;
+    text-align: center;
+}

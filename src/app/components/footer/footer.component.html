@@ -1,0 +1,44 @@
+<footer id="footerSection">
+    <div class="footer-container">
+        <div class="footer-section-container">
+            <div class="footer-section1">
+                <div class="footer-logo">
+                    <img src="../../../assets/devlats_logo.PNG" alt="logo" class="logo" routerLink="" />
+                    <span routerLink="">ATS</span>
+                </div>
+                <p class="footer-secondary-para">The all-in-one platform to manage your applications</p>
+                <div class="social-media-links">
+                    <div>
+                        <a href="#"><i class="fa-brands fa-linkedin footer-linkedin"></i>linkedin</a>
+                    </div>
+                    <div>
+                        <a href="#"><i class="fa-brands fa-x-twitter footer-twitter"></i>twitter</a>
+                    </div>
+                    <div>
+                        <a href="#"><i class="fa-brands fa-instagram footer-insta"></i>instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="company-container">
+                <h2 class="footer-para">Quick Links</h2>
+                <ul class="footer-list" *ngFor="let link of quicklinks">
+                    <li>{{link}}</li>
+                </ul>
+            </div>
+            <div class="company-container">
+                <h2 class="footer-para">Resources</h2>
+                <ul class="footer-list" *ngFor="let resource of resources">
+                    <li>{{resource}}</li>
+                </ul>
+            </div>
+            <div class="company-container">
+                <h2 class="footer-para">Contact Us</h2>
+                <ul class="footer-list" *ngFor="let contact of contact_list">
+                    <li><mat-icon>{{contact.icon}} </mat-icon> {{contact.content}}</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copy-right">&copy; 2025 Devlats ATS. Copyright and rights reserved</p>
+    </div>
+</footer>

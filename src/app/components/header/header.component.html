@@ -1,0 +1,37 @@
+<header id="header">
+    <div class="header-container">
+        <div class="header-section">
+            <div class="logo-container">
+                <img src="../../../assets/devlats_logo.PNG" alt="logo" class="logo" routerLink="" />
+                <span routerLink="">ATS</span>
+            </div>
+            <div class="hamburger-menu" [ngClass]="{ open: isMenuOpen }" (click)="toggleMenu()">
+                {{ isMenuOpen ? "✖" : "☰" }}
+            </div>
+            <div class="mobile-menu" [ngClass]="{ 'show-menu': isMenuOpen }">
+                <ul class="navbar-content">
+                    <li routerLink="">Home</li>
+                    <li routerLink="/jobs">Jobs</li>
+                    <li routerLink="/about">About</li>
+                    <li routerLink="/contact">Contact</li>
+                    <li routerLink="/login">Login</li>
+                    <li routerLink="/signup">Signup</li>
+                </ul>
+            </div>
+            <div class="navbar-container" *ngIf="!isMenuOpen">
+                <ul class="navbar-content">
+                    <li routerLink="">Home</li>
+                    <li routerLink="/jobs">Jobs</li>
+                    <li routerLink="/about">About</li>
+                    <li routerLink="/contact">Contact</li>
+                </ul>
+            </div>
+            <div class="header-login-section" *ngIf="!isMenuOpen">
+                <button mat-raised-button routerLink="/signup">Signup</button>
+                <button mat-raised-button class="primary-button" routerLink="/login">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

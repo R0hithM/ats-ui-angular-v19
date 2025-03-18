@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.login-container{
+    background: $white-color;
+    padding: 7rem 3rem 3rem;
+    @include responsive(md){
+        padding: 7rem 1rem 1rem;
+     }
+}
+.back-container{
+    @include displayflex(row,center,0.2rem);
+    margin-bottom: 4rem;
+}
+.back-button{
+    @extend .login-secondary-heading;
+    cursor: pointer;
+ }
+.login-section{
+    @include displayflex(column,center,2rem);
+    justify-content: center;
+    @include responsive(md){
+        @include displayflex(column,center,0);
+        justify-content: center;
+    }
+}
+.login-cards-container{
+    @include displaygrid(repeat(3,1fr),2rem);
+    @include responsive(lg){
+        @include displaygrid(repeat(2,1fr),2rem);
+    }
+    @include responsive(md){
+        @include displaygrid(repeat(1,1fr),2rem);
+    }
+}
+
+.login-header-content{
+    text-align: center;
+    margin-bottom: 2rem;
+    @include responsive(md){
+        margin-bottom: 1rem;
+    }
+}
+
+.login-heading{
+    @include text(2.5rem,700,$primary-color);
+    padding-bottom:1.5rem ;
+    & span{
+        color: $highlight-color;
+    }
+    @include responsive(lg){
+        @include text(2rem,600,$primary-color);
+    }
+}
+
+.login-secondary-heading,.login-icon{
+    @include text(1.5rem,700,$primary-color);
+}
+.login-secondary-para{
+    @include text(14px,400,#71717A);
+}
+
+.login-card{
+    box-shadow: 0px 4px 22.4px 0px #03426C33;
+    padding: 2rem 1rem ;
+    text-align: center;
+    @include displayflex(column,center,1rem);
+    justify-content: center; 
+    .login-button{
+        @include button($highlight-color, $white-color, 0 2rem, none, 6px);
+        @include responsive(lg){
+            @include button($highlight-color, $white-color, 0.2rem 0.5em, none, 6px);
+        }
+    }
+
+}

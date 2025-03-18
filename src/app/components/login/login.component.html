@@ -1,0 +1,32 @@
+<app-header></app-header>
+<main>
+  <div id="loginSection">
+    <div class="login-container">
+      <div class="back-container">
+        <div class="back-button" routerLink=""><--</div>
+        <h4 class="back-button" routerLink="">Back</h4>
+      </div>
+      <div class="login-section">
+        <div class="login-header-content">
+          <h2 class="login-heading">
+            <span>Application</span> Tracking System
+          </h2>
+          <p class="login-description">
+            A seamless platform for hiring managers, recruiters, and job seekers
+          </p>
+        </div>
+        <div class="login-cards-container">
+          <div class="login-card" *ngFor="let item of login_details">
+            <div class="login-icon">{{ item.icon }}</div>
+            <h4 class="login-secondary-heading">{{ item.title }}</h4>
+            <p class="login-secondary-para">{{ item.description }}</p>
+            <button mat-raised-button class="login-button">
+              {{ item.button }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>
